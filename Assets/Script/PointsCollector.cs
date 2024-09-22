@@ -9,9 +9,12 @@ public class PointsCollector : MonoBehaviour
     {
         // Check the collision of object with player who are tagged as Point.
         if(collision.gameObject.tag == "Point"){
-            Debug.Log("Collided with: " + collision.gameObject.name);
             Destroy(collision.gameObject);
             uiManager.points++;
+        }
+
+        if(collision.gameObject.tag == "Boundary"){
+            uiManager.isGameOver = true;
         }
     }
 }

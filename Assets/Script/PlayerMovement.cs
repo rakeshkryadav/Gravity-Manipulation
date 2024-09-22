@@ -18,6 +18,9 @@ public class PlayerMovement : MonoBehaviour
         playerAnimation = gameObject.GetComponentInChildren<Animator>();
 		player = gameObject.GetComponent<Rigidbody>();
 
+		// Set the gravity to default.
+		Physics.gravity = Vector3.down * 9.81f;
+
 		// Default Jump Height.
 		jump = new Vector3(0.0f, 2.0f, 0.0f);
 		hologram.SetActive(false);
@@ -106,8 +109,6 @@ public class PlayerMovement : MonoBehaviour
 			hologram.transform.Rotate(-Vector3.right * 90f);
 		}
 		if(Input.GetKeyUp(KeyCode.UpArrow)){
-			Debug.Log("Changing Gravity to UP");
-
 			// Inactive the hologram if key is released.
 			hologram.SetActive(false);
 			// Set hologram's rotation of initial.
@@ -128,8 +129,6 @@ public class PlayerMovement : MonoBehaviour
 			hologram.transform.Rotate(Vector3.right * 180f);
 		}
 		if(Input.GetKeyUp(KeyCode.DownArrow)){
-			Debug.Log("Changing Gravity to DOWN");
-
 			// Inactive the hologram if key is released.
 			hologram.SetActive(false);
 			// Set hologram's rotation of initial.
@@ -151,8 +150,6 @@ public class PlayerMovement : MonoBehaviour
 			hologram.transform.Rotate(-Vector3.forward * 90f);
 		}
 		if(Input.GetKeyUp(KeyCode.LeftArrow)){
-			Debug.Log("Changing Gravity to LEFT");
-
 			// Inactive the hologram if key is released.
 			hologram.SetActive(false);
 			// Set hologram's rotation of initial.
@@ -173,8 +170,6 @@ public class PlayerMovement : MonoBehaviour
 			hologram.transform.Rotate(Vector3.forward * 90f);
 		}
 		if(Input.GetKeyUp(KeyCode.RightArrow)){
-			Debug.Log("Changing Gravity to RIGHT");
-
 			// Inactive the hologram if key is released.
 			hologram.SetActive(false);
 			// Set hologram's rotation of initial.

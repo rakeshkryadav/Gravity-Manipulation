@@ -16,6 +16,7 @@ public class UserInterfaceManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         // Hide the banners.
         gameOver.SetActive(false);
         gameWon.SetActive(false);
@@ -63,7 +64,6 @@ public class UserInterfaceManager : MonoBehaviour
     }
 
     public void Restart(){
-        Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
 

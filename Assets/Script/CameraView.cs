@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class CameraView : MonoBehaviour
 {
+    // Test
     [SerializeField] private float mouseSensitivity = 100f;
     private float rotateX = 0f;
     // Start is called before the first frame update
